@@ -1,0 +1,105 @@
+@charset "ISO-8859-1";
+
+.principal {
+    background-image: url('../Imagenes/cabecera-bandera-abstractas-del-web-3917911.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.titulo {
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 30 px;
+    font-weight:bold ;
+    padding: 20px;
+    color: white;
+    margin-left: 20px;
+    
+}
+/*Diseño del menú horozontal*/
+
+ul{
+	list-style:none;
+	padding: 0px;
+	margin: 0px;
+	background: #c0c0c0;
+	line-height: 40px;/*alto del espacion del menú*/
+	overflow: auto; /*devuelve a la etiqueta ul el contexto de bloque, (sigue siendo un bloque) y asi en li se puede
+	utilizar el atributo float: left; y quitar el  display: inline-block; */ 
+}
+
+li {                  /* ubicacion del contenido de un elemento */
+    width: 115px; /*es como el espacio entre los link del menú*/
+    /*display: inline-block;*/
+    margin-right: 40px;
+    text-align: center;
+    float: left; /*siempre que se utilice float, se debe indicar en la etiqueta contenedor (ul en este caso)
+    el atributo overflow*/
+}
+
+nav{
+	font-family:Verdana, Geneva, Tahoma, sans-serif ;
+	font-weight:bold ;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+	color: white;
+}
+
+a:hover{
+	background: #8080ff;/*esto es para cuando se pase el mouse por el menu cambie de color*/
+	color: black;
+}
+
+/*-----------*/
+h2{
+	font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 30 px;
+    font-weight:bold ;
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+    color: red;
+	
+}
+
+.titulos {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+body {                       /* sin margenes toda la página */
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    margin-top: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: white;
+}
+table{
+    margin: 0 auto; /* Esta línea me alinea la tabla que contiene el formulario */
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+body{
+  	background-image: url("../Imagenes/Retail-de-supermercado.png");
+}
+
+/*Estilo para formulario de usuarios*/
+
+.formulario{
+	color: red;
+	margin-top: 50px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+    color: white;
+	
+}
+

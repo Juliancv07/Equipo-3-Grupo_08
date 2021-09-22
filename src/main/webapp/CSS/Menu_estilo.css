@@ -1,0 +1,146 @@
+body  {
+  margin: 0;
+  padding: 0;
+  font: normal 13px arial, helvetica, sans-serif;
+  background: #000;
+  }
+ 
+#menu {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  }
+ 
+#menu ul  {
+  list-style: none;
+  margin: 0;
+  }
+ 
+#menu ul li {
+  margin: 0;
+  float: left;
+  }
+ 
+#menu ul li a {
+  margin:0 2px;
+  width: 138px;
+  font-weight:bold;
+  font-size:1.5em;
+  text-align: center;
+  line-height: 44px;
+  display:block;
+  text-decoration: none
+  }
+ 
+#menu ul li a:hover {
+  color:#000;
+  }
+ 
+#item-uno a {
+  border-bottom:2px solid rgb(242, 223, 215);
+  color: rgb(242, 223, 215);
+  }
+ 
+#item-dos a {
+  border-bottom:2px solid rgb(254, 249, 255);
+  color:  rgb(254, 249, 255);
+  }
+ 
+#item-tres a {
+  border-bottom:2px solid rgb(212, 193, 236);
+  color: rgb(2212, 193, 236);
+  }
+ 
+#item-cuatro a {
+  border-bottom:2px solid rgb(159, 159, 237);
+  color: rgb(159, 159, 237);
+  }
+ 
+#item-cinco a {
+  border-bottom:2px solid rgb(115, 108, 237);
+  color: rgb(115, 108, 237);
+  }
+ 
+#item-seis a {
+  border-bottom:2px solid rgb(75, 77, 218);
+  color: rgb(75, 77, 218);
+  }
+ 
+#item-uno a:hover {
+  background:rgb(242, 223, 215); 
+  opacity: inherit;
+  }
+ 
+#item-dos a:hover {
+  background:rgb(254, 249, 255);
+  }
+ 
+#item-tres a:hover {
+  background:rgb(212, 193, 236);
+  }
+ 
+#item-cuatro a:hover {
+  background:rgb(159, 159, 237);
+  }
+ 
+#item-cinco a:hover {
+  background:rgb(115, 108, 237);
+  }
+ 
+#item-seis a:hover {
+  background:rgb(75, 77, 218);
+  }
+  
+  a.btnAzul {
+    display: block;
+    width: 250px;
+    height: 60px;
+    padding: 25px 0 0 0;
+    margin: 0 auto;
+    
+    background: #4682B4;
+    background: -moz-linear-gradient(top, #87CEEB 0%, #4682B4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87CEEB), color-stop(100%,#4682B4));
+ 
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #fff;
+    border: 1px solid #62C2F9;
+    border-radius: 10px;
+ 
+    font: bold 25px Helvetica, Sans-Serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3090C7;
+    text-shadow: 0px 1px 2px #62C2F9;
+}
+.titulo {
+    font-family:calibri;
+    font-size: 10 px;
+    font-weight:normal; ;
+    padding: 20px;
+    color: white;
+    margin-left: 20px;
+    
+}
+
+.botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+#example2 {
+  box-sizing: content-box;
+  width:inherit;
+  height: 20px;
+  padding: 10px;  
+  border: 1px solid #383838;
+  background:#383838;
+  font:normal;
+  font-size:20px;
+  color:white;
+}
