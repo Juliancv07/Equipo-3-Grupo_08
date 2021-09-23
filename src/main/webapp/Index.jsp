@@ -15,7 +15,7 @@
 	%>
 <h1>Tienda Genérica</h1>
 <div><h2><a href="Login.jsp">Ingreso Administrador</a></h2></div>
-
+<form action="prueba"></form>
 </body>
 </html>
 
