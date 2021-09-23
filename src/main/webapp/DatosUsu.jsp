@@ -79,7 +79,10 @@ if(request.getParameter("men")!=null){
 	
 	    </form> 
 	    
-	    <!-- formulario 2  consultar-->
+	  
+  
+    </table>
+      <!-- formulario 2  consultar-->
 			<form action="Usuario" method="post">
 				<fieldset>
 					<legend>Consultar Cédula</legend>
@@ -88,8 +91,6 @@ if(request.getParameter("men")!=null){
 				</fieldset>
 			</form>
 			
-  
-    </table>
 
 </body>
 </html>
