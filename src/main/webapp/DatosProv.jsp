@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -28,6 +29,7 @@ if(request.getParameter("nitproveedor")!=null)
 if(request.getParameter("men")!=null)
 {
 	String mensaje= request.getParameter("men");
+	out.print("<script type='text/javascript'>alert('"+mensaje+"');</script>");
 	nitproveedor=""; ciudad_proveedor=""; direccion_proveedor=""; nombre_proveedor=""; telefono_proveedor="";
 } 
 %>
