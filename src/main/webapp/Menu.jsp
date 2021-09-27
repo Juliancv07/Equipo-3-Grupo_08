@@ -26,22 +26,13 @@
         	</ul>
         </nav>
     </div>
-    <!--rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrrrr
-    rrrirrrrrrrrrrrrrrrrrrr
-    rrrrrrrrrrrrrrrrrrrrrrr
-    lrrrrrrrrrrrrrrrr
-    zdgdgnsfgnsfhmshmgjmgj,j -->
+    <!--xxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxx -->
 </body>
 </html> 
