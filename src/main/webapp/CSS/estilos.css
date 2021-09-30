@@ -1,29 +1,48 @@
 @charset "ISO-8859-1";
-
+/*imagen de la cabecera*/
 .principal {
-    background-image: url('../Imagenes/cabecera-bandera-abstractas-del-web-3917911.jpg');
+    background-image: url('../Imagenes/header4.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
-    height: 120px;
+    /*justify-content: space-between;*/
+    height: 140px;
+	justify-content: center; /*el titulo de los formualrios queda centrado*/
+  	
 }
-.titulo {
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    font-size: 30 px;
-    font-weight:bold ;
-    padding: 20px;
-    color: white;
-    margin-left: 20px;
-    
+.principal h1{
+	font-size: 40px; 
+	justify-content: center;
+}
+
+/*contenedor del index donde se ingresa el administrador*/
+#container1 {
+	width:530px;
+	height: 500px;
+	/*background-color:#0C6;*/ 
+	margin-left: 430px;
+	
+}
+/*sentrando imagen de boton en el index*/
+#container1 img{
+	display:block;
+	margin:auto;
 }
 /*Diseño del menú horozontal*/
+
+#container {
+	width:1100px;
+	/*background-color:#0C6;*/ 
+	margin: 0 auto;
+}
+
 
 ul{
 	list-style:none;
 	padding: 0px;
 	margin: 0px;
-	background: #c0c0c0;
-	line-height: 40px;/*alto del espacion del menú*/
+	background: #1188ff;/*primer color de fondo de la barra de menu*/
+	line-height: 40px;/*alto del espacio del menú*/
 	overflow: auto; /*devuelve a la etiqueta ul el contexto de bloque, (sigue siendo un bloque) y asi en li se puede
 	utilizar el atributo float: left; y quitar el  display: inline-block; */ 
 }
@@ -48,39 +67,84 @@ a{
 	color: white;
 }
 
-a:hover{
-	background: #8080ff;/*esto es para cuando se pase el mouse por el menu cambie de color*/
+nav ul li a:hover{
+	background: #20ff58;/*esto es para cuando se pase el mouse por el menu cambie de color*/
 	color: black;
 }
 
-/*-----------*/
-h2{
+section{ width: 400px;
+		height: 400px;
+		background-color:#999;
+		margin:10px;
+		/*line-height:24px;*/ 
+		padding:10px; 
+		box-sizing:border-box; 
+		float:left;
+		font-family: Verdana, Geneva, Tahoma, sans-serif ;
+		background-image: url('../Imagenes/diseño1.jpg');
+		/*background-repeat: no-repeat;*/
+		/*background-size: cover;*/
+}
+
+.Contenido-int{ /*background-color: #FC9;*/
+				width:560px;
+				margin:10px;
+				float:left;
+				padding:20px;
+				box-sizing:border-box;
+	}
+/*el aside y h3 es donde se encuentra la galeria de fotos, esto esta en el formulario Menu*/
+aside{
+	width:660px; 
+	margin:10px;
+	/*background-color: #09F;*/
+	padding:10px; /*este se utiliza cuando no se quiere que la caja se modifique y la medida es hacia adentro, debe ir con el box-sizing:border-box*/
+	box-sizing:border-box; 
+	float:left;
+	}
+h3{
+	text-align: center;
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: black; /*cambia el color del h1 que es el nombre de cada formulario*/
+}
+
+footer{
+	background-color: #FFF;
+	text-align:center;
+	padding:20px;
+	clear: both;/*limpia y muestra lo q estaba flotando*/
+	}
+
+/* ---------- */
+h2 a{
 	font-family:Verdana, Geneva, Tahoma, sans-serif ;
     font-size: 30 px;
     font-weight:bold ;
-    padding: 20px;
+    padding: 10px;
     margin-left: 20px;
     text-align: center;
     color: red;
 	
 }
 
-.titulos {
-    text-decoration: none;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
+
 body {                       /* sin margenes toda la página */
     margin: 0px;
+    background-image: url("../Imagenes/fondotienda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /*con esta linea hace que ocupe el ancho de la pagian*/
+    background-attachment:fixed;
 }
 
+/*titulo de los formularios y del index*/
 h1{
-    text-align: center;
+	text-align: center;
     margin-top: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
-    color: white;
+    color: black; /*cambia el color del h1 que es el nombre de cada formulario*/
 }
 table{
     margin: 0 auto; /* Esta línea me alinea la tabla que contiene el formulario */
@@ -88,18 +152,30 @@ table{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 25px;
 }
-body{
-  	background-image: url("../Imagenes/Retail-de-supermercado.png");
-}
 
 /*Estilo para formulario de usuarios*/
 
 .formulario{
-	color: red;
 	margin-top: 50px;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 20px;
     color: white;
-	
 }
+
+
+/*Estilo para formulario de login*/
+.ingreso{
+	margin-top: 50px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+    color: white;
+}
+/*titulo del recuadro proveedfores*/
+legend{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+    color: red;
+}
+
+
 

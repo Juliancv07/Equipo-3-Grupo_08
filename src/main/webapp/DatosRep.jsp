@@ -10,6 +10,7 @@
     <title>Datos Reportes</title>
 </head>
 <body>
+<div id="container">
 	<header class="principal">
         <div>
             <h1>Formulario Reportes</h1>
@@ -33,8 +34,7 @@
     	<p><label for="Listado Clientes">Listado Clientes</label><input type="text" autofocus name="Listado Clientes"  required>
     	<p><label for="Ventas por Cliente">Ventas por Cliente</label><input type="text" autofocus name="Ventas por Cliente"  required>
 
-	 	<a href="Index.jsp">CREAR  </a>
  	</div>
-
+</div>
 </body>
 </html>

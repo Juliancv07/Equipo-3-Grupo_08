@@ -10,6 +10,7 @@
     <title>Datos Ventas</title>
 </head>
 <body>
+<div id="container">
 	<header class="principal">
         <div>
             <h1>Formulario Ventas</h1>
@@ -41,8 +42,7 @@
     	<p><label for="Total IVA">Total IVA</label><input type="text" autofocus name="Total IVA" required></p>
     	<p><label for="Total con IVA">Total con IVA</label><input type="text" autofocus name="Total con IVA" required></p>
     	
-	 	<a href="Index.jsp">CREAR  </a>
  	</div>
-
+</div>
 </body>
 </html>
