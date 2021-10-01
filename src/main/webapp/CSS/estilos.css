@@ -23,7 +23,7 @@
 	margin-left: 430px;
 	
 }
-/*sentrando imagen de boton en el index*/
+/*centrando imagen de boton en el index*/
 #container1 img{
 	display:block;
 	margin:auto;
@@ -86,13 +86,13 @@ section{ width: 400px;
 		/*background-size: cover;*/
 }
 
-.Contenido-int{ /*background-color: #FC9;*/
+/*.Contenido-int{ /*background-color: #FC9;
 				width:560px;
 				margin:10px;
 				float:left;
 				padding:20px;
 				box-sizing:border-box;
-	}
+	}*/
 /*el aside y h3 es donde se encuentra la galeria de fotos, esto esta en el formulario Menu*/
 aside{
 	width:660px; 
@@ -102,13 +102,6 @@ aside{
 	box-sizing:border-box; 
 	float:left;
 	}
-h3{
-	text-align: center;
-    margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-    color: black; /*cambia el color del h1 que es el nombre de cada formulario*/
-}
 
 footer{
 	background-color: #FFF;
@@ -117,7 +110,7 @@ footer{
 	clear: both;/*limpia y muestra lo q estaba flotando*/
 	}
 
-/* ---------- */
+/* ----para la frase ingreso administrdor---- */
 h2 a{
 	font-family:Verdana, Geneva, Tahoma, sans-serif ;
     font-size: 30 px;
@@ -170,12 +163,12 @@ table{
 	font-size: 20px;
     color: white;
 }
-/*titulo del recuadro proveedfores*/
-legend{
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-size: 20px;
-    color: red;
+ /* diseño para todos los botones de crear consultar etc...*/
+#boton{
+	font-family:Verdana, Geneva, Tahoma, sans-serif ;
+	color: #ff0080;
+	background-color: black;
+	border-radius: 10% / 50%;
+	padding: 5px 10px;
+	text-align: center;
 }
-
-
-

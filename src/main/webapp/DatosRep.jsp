@@ -28,13 +28,30 @@
         	</ul>
         </nav>
     </div>
-
-    <div class="formulario">
-    	<label for="Listado Usuarios">Listado Usuarios</label><input type="text" autofocus name="Listado Usuarios"  required>
-    	<p><label for="Listado Clientes">Listado Clientes</label><input type="text" autofocus name="Listado Clientes"  required>
-    	<p><label for="Ventas por Cliente">Ventas por Cliente</label><input type="text" autofocus name="Ventas por Cliente"  required>
-
- 	</div>
+		<table borde="0">
+			
+			<form class="formulario" action="Usuario" method="post">
+				<tr>
+					<td>
+						<label for="Listado Usuarios">Listado por Usuarios </label><input type="text" autofocus name="Listado Usuarios" >
+						<input type= "submit" name= "Listado por Usuarios" value="Listado por Usuarios" id="boton">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Listado Clientes">Listado por Clientes </label><input type="text" autofocus name="Listado Clientes" >
+						<input type= "submit" name= "Listado por Clientes" value="Listado por Clientes" id="boton">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="Ventas por Cliente">Ventas por Cliente </label><input type="text" autofocus name="Ventas por Cliente" >
+						<input type= "submit" name= "Ventas por Cliente" value="Ventas por Cliente" id="boton">
+					</td>
+				</tr>	
+			</form>
+		
+		</table>
 </div>
 </body>
 </html>

@@ -29,20 +29,69 @@
         </nav>
     </div>
 
-    <div class="formulario">
-    	<label for="Cedula">Cédula</label><input type="text" autofocus name="Cedula"  required>
-    	<label for="Cliente">Cliente</label><input type="text" autofocus name="Cliente"  required>
-    	<label for="Consecutivo">Consecutivo</label><input type="text" autofocus name="Consecutivo"  required>
-    	<label for="Cod. Producto">Cod. Producto</label><input type="text" autofocus name="Cod. Producto"  required>
-    	<label for="Nombre Producto">Nombre Producto</label><input type="text" autofocus name="Nombre Producto"  required>
-    	<label for="Cantidad">Cantidad</label><input type="text" autofocus name="Cantidad"  required>
-    	<label for="Vlr Total">Vlr Total</label><input type="int" autofocus name="Vlr Total"  required>
-    	
-    	<p><label for="Total Venta">Total Venta</label><input type="text" autofocus name="Total Venta" required></p>
-    	<p><label for="Total IVA">Total IVA</label><input type="text" autofocus name="Total IVA" required></p>
-    	<p><label for="Total con IVA">Total con IVA</label><input type="text" autofocus name="Total con IVA" required></p>
-    	
- 	</div>
+  	    <!-- formulario 2  consultar-->
+				<form action="Usuario" method="post">
+				
+					<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;"><!-- estilo al borde y fondo del cuadro  -->
+						
+						<legend style="font-weight:bold; color:black;">Consultar Cédula</legend><!-- estilo para la letra  -->
+						<tr>	
+							<td><label>Cedula: </label><input type="text" name="cedula">
+								<input type= "submit" name= "consultar" value="Consultar" id="boton"></td>
+							<td><label>Cliente: </label><input type="text" name="cliente"></td>
+							<td><label>Consec: </label><input type="text" name="consec"></td>
+						</tr>
+					</fieldset>
+				
+				</form>
+			
+    
+  <fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">  
+	
+	<table border="0">
+			<legend style="font-weight:bold; color:black;">Formulario</legend>	
+	            <form action="" class="formulario">
+	                <tr>
+	                    <td>
+	                        <div>
+	                            <td><label for="">Cédula</label></td>
+	                            <td><input type="text"></td>
+	                            <td><label for="">Usuario</label></td>  
+	                            <td><input type="text"></td>
+	                        </div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <div>
+	                            <td><label for="">Nombre Completo</label></td>
+	                            <td><input type="text"></td>
+	                            <td><label for="">Contraseña</label></td>
+	                            <td><input type="password"></td>
+	                        </div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <div>
+	                            <td><label for="">Correo Electrónico</label></td>
+	                            <td><input type="email"></td>
+	                        </div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <div class="botones">
+	                            <td><input type="submit" name="Consultar" value="Consultar" class="Boton"></td>
+	                            <td><input type="submit" name="Crear" value="Crear" class="Boton"></td>
+	                            <td><input type="submit" name="Actualizar" value="Actualizar" class="Boton"></td>
+	                            <td><input type="submit" name="Borrar" value="Borrar" class="Boton"></td>
+	                        </div>
+	                    </td>
+	                </tr>
+	            </form>
+	</table>
+</fieldset>
 </div>
 </body>
 </html>

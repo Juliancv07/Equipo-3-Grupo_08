@@ -49,46 +49,54 @@
 		        	</ul>
 		        </nav>
 		    </div>
-	
+		    
+			      <!-- formulario 2  consultar-->
+				<form action="Usuario" method="post">
+				
+					<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80; text-align:center;"><!-- estilo al borde y fondo del cuadro  -->
+						
+						<legend style="font-weight:bold; color:black;">Consultar Cédula</legend><!-- estilo para la letra  -->
+						<div><label>Cedula: </label><input type="text" name="cedula">
+						<input type= "submit" name= "consultar" value="Consultar" id="boton"></div>
+					
+					</fieldset>
+				
+				</form>
+				
+	<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">
 		     <table border="0">
 		     
+		     <legend style="font-weight:bold; color:black;">Formulario</legend>
 		     	<!-- formulario 1  crear-->
 		    	<form class="formulario" action="Usuario" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
 			    	<tr>
-			    		<td><div><label for="Cedula">Cédula</label></td>
-			    		<td><input type="text" autofocus name="cedula_usuario" value ="<%=cedula%>"></div></td>	    		
-			    		<td><div><label for="Usuario">Usuario</label></td>
-			        	<td><input type="text" name="usuario" value ="<%=Usuario%>"></div></td>    		
+			    		<td><label for="Cedula">Cédula</label></td>
+			    		<td><input type="text" autofocus name="cedula_usuario" value ="<%=cedula%>"></td>	    		
+			    		<td><label for="Usuario">Usuario</label></td>
+			        	<td><input type="text" name="usuario" value ="<%=Usuario%>"></td>    		
 			    	</tr>	    	
 			    	<tr>
-			    		<td><div><label for="Nombresusuario">Nombre Completo</label></td>
-			    		<td><input type="text" autofocus name="nombre_usuario" value ="<%=Nombresusuario%>"></div></td>
-			    		<td><div><label for="Password">Contraseña </label></td>
-			        	<td><input type="Password" name="password" value ="<%=Password%>"></div></td>  <!-- oculata los datos de la contraseña -->		
+			    		<td><label for="Nombresusuario">Nombre Completo</label></td>
+			    		<td><input type="text" autofocus name="nombre_usuario" value ="<%=Nombresusuario%>"></td>
+			    		<td><label for="Password">Contraseña </label></td>
+			        	<td><input type="Password" name="password" value ="<%=Password%>"></td>  <!-- oculata los datos de la contraseña -->		
 			    	</tr>
 			    	<tr>
-			    		<td><div><label for="Email">Correo Electronico</label></td>
-			    		<td><input id="name" type="text" autofocus name="email_usuarios" value ="<%=Email%>"></div></td>
+			    		<td><label for="Email">Correo Electronico</label></td>
+			    		<td><input id="name" type="text" autofocus name="email_usuarios" value ="<%=Email%>"></td>
 			    		
 			    	</tr>
 			    	<tr>
-			    		<td><input type= "submit" name= "consultar" value="Consultar"></td>
-						<td><input type= "submit" name= "crear" value="Crear"></td>
-						<td><input type= "submit" name= "actualizar" value="Actualizar"></td>
-						<td><input type= "submit" name= "borrar" value="Borrar"></td>
+			    		<!--  <td><input type= "submit" name= "consultar" value="Consultar"></td>-->
+						<td><input type= "submit" name= "crear" value="Crear" id="boton"></td>
+						<td><input type= "submit" name= "actualizar" value="Actualizar" id="boton"></td>
+						<td><input type= "submit" name= "borrar" value="Borrar" id="boton"></td>
 			    	</tr>
 			
 			    </form> 
-		 
+		 	
 		    </table>
-	      <!-- formulario 2  consultar-->
-				<form action="Usuario" method="post">
-					<fieldset>
-						<legend>Consultar Cédula</legend>
-						<div><label>Cedula: </label><input type="text" name="cedula">
-						<input type= "submit" name= "consultar" value="Consultar"></div>
-					</fieldset>
-				</form>
+	</fieldset>
 	</div>
 </body>
 </html>
