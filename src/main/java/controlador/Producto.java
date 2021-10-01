@@ -77,12 +77,13 @@ public class Producto extends HttpServlet {
 			nombre_producto=prod.getNombre_producto();
 			precio_compra=prod.getPrecio_compra();
 			precio_venta=prod.getPrecio_venta();
-			response.sendRedirect("DatosProd.jsp?codigo_producto="+codigo_producto+"&&ivacompra="+ivacompra+"&&nitproveedor="+nitproveedor +"&&nombre_producto="+ nombre_producto+ "&&precio_compra="+precio_compra+ "&&precio_venta="+precio_venta);
+			response.sendRedirect("DatosProd.jsp?codigo_producto="+codigo_producto+"&&ivacompra="+ivacompra+"&&nitproveedor="+nitproveedor 
+					+"&&nombre_producto="+ nombre_producto+ "&&precio_compra="+precio_compra+ "&&precio_venta="+precio_venta);
 			}
 			else 
 			{
-				JOptionPane.showMessageDialog(null, "No se encontró el producto");
-				response.sendRedirect("DatosProd.jsp?men= El Producto no se encontro.");
+				//JOptionPane.showMessageDialog(null, "No se encontró el producto");
+				response.sendRedirect("DatosProd.jsp?men=El Producto no se encontro");
 			}
 		}
         if(request.getParameter("actualizar")!=null) {
@@ -115,7 +116,7 @@ public class Producto extends HttpServlet {
 	            }
 	            else 
 	            {
-                response.sendRedirect("DatosProd.jsp?men=El producto no se elimino");
+	            	response.sendRedirect("DatosProd.jsp?men=El producto no se elimino");
 	            }
             }
             else {

@@ -52,8 +52,20 @@
 	        	</ul>
 	        </nav>
 	    </div>
+	          </form> 
+				<!-- formulario 2  consultar-->
+		    		<form action="Cliente" method="post">
+					<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80; text-align:center;">
+						<legend style="font-weight:bold; color:black;">Consultar Cédula</legend>
+						<div><label>Cedula: </label><input type="text" name="cedula_cliente">
+						<input type= "submit" name= "consultar" value="Consultar" id="boton"></div>
+					</fieldset>
+			</form>
+
+<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;">
 	
 	     <table border="0">
+	     <legend style="font-weight:bold; color:black;">Formulario Clientes</legend>
 	     
 	     	<!-- formulario 1  crear-->
 	    	<form class="formulario" action="Cliente" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
@@ -77,22 +89,13 @@
 		    	<tr>
 		    	
 		    		<!-- <td><input type= "submit" name= "consultar" value="Consultar"></td> -->
-					<td><input type= "submit" name= "crear" value="Crear"></td>
-					<td><input type= "submit" name= "actualizar" value="Actualizar"></td>
-					<td><input type= "submit" name= "borrar" value="Borrar"></td>
+					<td><input type= "submit" name= "crear" value="Crear" id="boton"></td>
+					<td><input type= "submit" name= "actualizar" value="Actualizar" id="boton"></td>
+					<td><input type= "submit" name= "borrar" value="Borrar" id="boton"></td>
 		    	</tr>
-		
-		    </form> 
-				<!-- formulario 2  consultar-->
-		    		<form action="Cliente" method="post">
-					<fieldset>
-						<legend>Consultar Cédula</legend>
-						<div><label>Cedula: </label><input type="text" name="cedula_cliente">
-						<input type= "submit" name= "consultar" value="Consultar"></div>
-					</fieldset>
-				</form>
-	  
+  
 	    </table>
+</fieldset>
 </div>
 </body>
 </html>

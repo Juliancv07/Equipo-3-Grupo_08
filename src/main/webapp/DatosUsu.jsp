@@ -63,10 +63,10 @@
 				
 				</form>
 				
-	<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">
+	<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;">
 		     <table border="0">
 		     
-		     <legend style="font-weight:bold; color:black;">Formulario</legend>
+		     <legend style="font-weight:bold; color:black;">Formulario Usuarios</legend>
 		     	<!-- formulario 1  crear-->
 		    	<form class="formulario" action="Usuario" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
 			    	<tr>

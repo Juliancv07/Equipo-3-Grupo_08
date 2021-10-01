@@ -55,17 +55,17 @@
 	     
 		    <!-- formulario 2  consultar-->
 				<form action="Proveedor" method="post">
-					<fieldset>
-						<legend>Consultar NIT</legend>
+					<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80; text-align:center;">
+						<legend style="font-weight:bold; color:black;">Consultar NIT</legend>
 						<div><label>NIT: </label><input type="text" name="nitproveedor">
-						<input type= "submit" name= "consultar" value="Consultar"></div>
+						<input type= "submit" name= "consultar" value="Consultar" id="boton"></div>
 					</fieldset>
 				</form>
 	    
-	<fieldset>
-	<legend>Formulario Proveedores</legend>
+<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">
+
 	     <table border="0">
-	     
+	     	<legend>Formulario Proveedores</legend>	     
 	     	<!-- formulario 1  crear-->
 	    	<form class="formulario" action="Proveedor" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
 		    	
@@ -88,9 +88,9 @@
 		    	</tr>
 		    	<tr>
 		    		<!-- <td><input type= "submit" name= "consultar" value="Consultar"></td> -->
-					<td><input type= "submit" name= "crear" value="Crear"></td>
-					<td><input type= "submit" name= "actualizar" value="Actualizar"></td>
-					<td><input type= "submit" name= "borrar" value="Borrar"></td>
+					<td><input type= "submit" name= "crear" value="Crear" id="boton"></td>
+					<td><input type= "submit" name= "actualizar" value="Actualizar" id="boton"></td>
+					<td><input type= "submit" name= "borrar" value="Borrar" id="boton"></td>
 		    	</tr>
 			
 		    </form>

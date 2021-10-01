@@ -28,7 +28,9 @@
         	</ul>
         </nav>
     </div>
+   <fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;">
 		<table borde="0">
+		 <legend style="font-weight:bold; color:black;">Formulario de Reportes</legend>
 			
 			<form class="formulario" action="Usuario" method="post">
 				<tr>
@@ -52,6 +54,7 @@
 			</form>
 		
 		</table>
+	</fieldset>
 </div>
 </body>
 </html>

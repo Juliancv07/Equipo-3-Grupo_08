@@ -47,8 +47,8 @@
 		
 			
     
-  <fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">  
-	<Ul>
+  <fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;">  
+	<legend style="font-weight:bold; color:black;">Formulario Ventas</legend>
         <table>
             <form action="">
                 <thead>
@@ -63,27 +63,27 @@
                 <tbody>
                     <tr>
                         <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="submit" name="Consultar" value="Consultar" id="boton" ></td> 
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="submit" name="Consultar" value="Consultar" id="boton"></td> 
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="submit" name="Consultar" value="Consultar" id="boton"></td> 
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" rowspan="3"><input type="submit" name="Confirmar" value="Confirmar"></td>
+                        <td colspan="3" rowspan="3"><input type="submit" name="Confirmar" value="Confirmar" id="boton"></td>
                         <td>Total Venta</td>
                         <td><input type="text"></td>
                     </tr>
@@ -100,7 +100,7 @@
                 </tbody>
             </form>
         </table>
-    </Ul>
+
 </fieldset>
 </div>
 </body>

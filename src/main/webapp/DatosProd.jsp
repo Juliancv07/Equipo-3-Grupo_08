@@ -52,8 +52,28 @@
 	        	</ul>
 	        </nav>
 	    </div>
-	
+	   
+			<form action="Producto" method="post">
+			
+				<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80; text-align:center;">
+				
+					<legend>Consultar Producto</legend>
+					<tr>
+						<td><label>Nombre del Producto:</label><input type="text" name="nombre_producto">
+						<input type="submit" name="consultar" Value="Consultar" id="boton"></td>
+						<td> 
+							<form action="Producto" method="post" enctype="multipart/form-data"> <!-- indica multipart que se va a trabajar archivos -->
+								<label>Archivo:</label><input type="file" name="archivo" value="Examinar" accept="application/vnd.ms-excel" ><!--name archivo es llamado por el request// accept= tipo de archivos admitidos -->
+								<input type="submit" name="cargar" value="Cargar archivo" id="boton">  <!-- el controlador recibe el archivo  -->
+							</form> </td>
+					</tr>
+				</fieldset>
+			
+			</form>
+			
+<fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;">	
 	     <table border="0">
+	     <legend>Formulario Producto</legend>
 	     
 	     	<!-- formulario 1  crear-->
 	    	<form class="formulario" action="Producto" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
@@ -82,25 +102,15 @@
 	
 		    	<tr>
 		    		<!-- <td><input type= "submit" name= "consultar" value="Consultar"></td> -->
-					<td><input type= "submit" name= "crear" value="Crear"></td>
-					<td><input type= "submit" name= "actualizar" value="Actualizar"></td>
+					<td><input type= "submit" name= "crear" value="Crear" id="boton"></td>
+					<td><input type= "submit" name= "actualizar" value="Actualizar" id="boton"></td>
 					<!-- <td><input type= "submit" name= "borrar" value="Borrar"></td> -->
 		    	</tr>
 		
 		    </form> 		    
-		<hr>
-			<form action="Producto" method="post">
-				<fieldset>
-					<legend>Consultar producto</legend>
-					<div><label>nombre_producto:</label><input type="text" name="nombre_producto">
-					<input type="submit" name="consultar" Value="Consultar"></div>
-				</fieldset>
-			</form>
-		
-			<form action="Producto" method="post" enctype="multipart/form-data"> <!-- indica multipart que se va a trabajar archivos -->
-				<div><label>Archivo:</label><input type="file" name="archivo" value="Examinar" accept="application/vnd.ms-excel"></div><!--name archivo es llamado por el request// accept= tipo de archivos admitidos -->
-				<input type="submit" name="cargar" value="Cargar archivo">  <!-- el controlador recibe el archivo  -->
-			</form>
+		</table>
+	</fieldset>
+			
 
 </body>
 </html>
