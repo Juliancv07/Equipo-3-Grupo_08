@@ -44,53 +44,63 @@
 					</fieldset>
 				
 				</form>
+		
 			
     
   <fieldset style="border:3px groove #ccc; background-color: #FFFFFF80;;">  
-	
-	<table border="0">
-			<legend style="font-weight:bold; color:black;">Formulario</legend>	
-	            <form action="" class="formulario">
-	                <tr>
-	                    <td>
-	                        <div>
-	                            <td><label for="">Cédula</label></td>
-	                            <td><input type="text"></td>
-	                            <td><label for="">Usuario</label></td>  
-	                            <td><input type="text"></td>
-	                        </div>
-	                    </td>
-	                </tr>
-	                <tr>
-	                    <td>
-	                        <div>
-	                            <td><label for="">Nombre Completo</label></td>
-	                            <td><input type="text"></td>
-	                            <td><label for="">Contraseña</label></td>
-	                            <td><input type="password"></td>
-	                        </div>
-	                    </td>
-	                </tr>
-	                <tr>
-	                    <td>
-	                        <div>
-	                            <td><label for="">Correo Electrónico</label></td>
-	                            <td><input type="email"></td>
-	                        </div>
-	                    </td>
-	                </tr>
-	                <tr>
-	                    <td>
-	                        <div class="botones">
-	                            <td><input type="submit" name="Consultar" value="Consultar" class="Boton"></td>
-	                            <td><input type="submit" name="Crear" value="Crear" class="Boton"></td>
-	                            <td><input type="submit" name="Actualizar" value="Actualizar" class="Boton"></td>
-	                            <td><input type="submit" name="Borrar" value="Borrar" class="Boton"></td>
-	                        </div>
-	                    </td>
-	                </tr>
-	            </form>
-	</table>
+	<Ul>
+        <table>
+            <form action="">
+                <thead>
+                    <tr>
+                        <th>Cod.Producto</th>
+                        <th></th>
+                        <th>Nombre Producto</th>
+                        <th>Cant.</th>
+                        <th>Vlr. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="submit" name="Consultar" value="Consultar"></td> 
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" rowspan="3"><input type="submit" name="Confirmar" value="Confirmar"></td>
+                        <td>Total Venta</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Total IVA</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Total Con IVA</td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </form>
+        </table>
+    </Ul>
 </fieldset>
 </div>
 </body>
