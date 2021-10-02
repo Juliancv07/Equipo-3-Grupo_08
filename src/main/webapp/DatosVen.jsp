@@ -61,23 +61,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr><!-- se compara codigo de consultar de usuarios y se agregan la lineas que faltaban-->
+                        <td><input type="text" name="codigo_producto"></td>
+                        <td><input type="submit" name="Consultar1" value="Consultar" id="boton" ></td> <!-- cambiar el name consultar 1, 2, 3 -->
+                        <!-- traer el codigo de consultar de usuarios -->
                         <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar" id="boton" ></td> 
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                   
+                    <tr>
+  						<td><input type="text" name="codigo_producto"></td>
+                        <td><input type="submit" name="Consultar2" value="Consultar" id="boton" ></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar" id="boton"></td> 
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="submit" name="Consultar" value="Consultar" id="boton"></td> 
+						<td><input type="text" name="codigo_producto"></td>
+                        <td><input type="submit" name="Consultar3" value="Consultar" id="boton" ></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
                         <td><input type="text"></td>

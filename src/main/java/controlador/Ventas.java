@@ -30,6 +30,9 @@ public class Ventas extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		ProductoDAO proDao= new ProductoDAO();
+		
+		/*esto sobra porque ya esata el dela linea 51 en adelante*/
+		
 		/*consulta el libro y trae los datos
 		if (request.getParameter("consultarProd")!=null) {
 			String codigo_producto=request.getParameter("producto");
@@ -49,8 +52,12 @@ public class Ventas extends HttpServlet {
 		//consultar o buscar
 		
 		if(request.getParameter("consultar")!=null) {
-			String nombre_producto, codigo_producto;
+			String nombre_producto, codigo_producto;//agregar precio del producto y el iva
 			codigo_producto=request.getParameter("codigo_producto");
+			
+			precio_venta=request.getParameter();//toca agregarlas en el DTO "parece"
+			valoriva=request.getParameter(valoriva);//toca agregarlas
+			
 			ProductoDTO pro=proDao.Buscar_Producto(codigo_producto);
 
 			if(pro!=null) {
