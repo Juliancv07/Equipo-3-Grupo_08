@@ -37,7 +37,7 @@
 	{
 	
 		codigo_producto=request.getParameter("codigo_producto"); //los nombres debe ser como estan en Usuario.java response.sendRedirect
-		nombre_cliente=request.getParameter("nombre_producto");
+		nombre_producto=request.getParameter("nombre_producto");
 
 	}
 	
@@ -75,40 +75,42 @@
 						<legend style="font-weight:bold; color:black;">Consultar Cédula</legend><!-- estilo para la letra  -->
 						<tr>	
 							<td><label for="cedula_cliente">Cédula</label></td>
-		    				<td><input type="text" autofocus name="cedula_cliente" value ="<%=cedula_cliente%>"></td>	
+		    				<td><input type="text"  name="cedula_cliente" value ="<%=cedula_cliente%>"></td>	
 			    			<td><input type= "submit" name= "consultar" value="Consultar" id="boton"></td>
-		    				<td><input type="text" autofocus name="nombre_cliente" value ="<%=nombre_cliente%>"></td>
+		    				<td><input type="text"  name="nombre_cliente" value ="<%=nombre_cliente%>"></td>
 			    			<td><label>Consec: </label><input type="text" name="consec"></td>
 
 						</tr>
 					</fieldset>
 				
-				</form>
+
 				
 				
 <fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;">  
 	<legend style="font-weight:bold; color:black;">Formulario Ventas</legend>
         <table>
-            <form action="Ventas" method="post">
+
                 <thead>
+		                  	<tr>
+		                        <th>Cod.Producto</th>
+		                        <th></th>
+		                        <th>Nombre Producto</th>
+		                        <th>Cant.</th>
+		                        <th>Vlr. Total</th>
+		                    </tr>
                 	
                 	<tr>
-                			<th>Cod.Producto</th>	
+	
 							<td><label for="codigo_producto"></label></td>
-		    				<td><input type="text" autofocus name="codigo_producto" value ="<%=codigo_producto%>"></td>	
+		    				<td><input type="text"  name="codigo_producto" value ="<%=codigo_producto%>"></td>	
 			    			<td><input type= "submit" name= "consultar1" value="Consultar" id="boton"></td>
-			    			<td><input type="text" autofocus name="nombre_producto" value ="<%=nombre_producto%>"></td>
+			    			<td><input type="text"  name="nombre_producto" value ="<%=nombre_producto%>"></td>
 			    					    				
 					</tr>    
-                
-                    <tr>
-                        <th>Cod.Producto</th>
-                        <th></th>
-                        <th>Nombre Producto</th>
-                        <th>Cant.</th>
-                        <th>Vlr. Total</th>
-                    </tr>
+          
+                  
                 </thead>
+                
                 <tbody>
                     <tr><!-- se compara codigo de consultar de usuarios y se agregan la lineas que faltaban-->
                         <td><input type="text" name="codigo_producto"></td>
@@ -149,11 +151,11 @@
                         <td><input type="text"></td>
                     </tr>
                 </tbody>
-            </form>
+            
         </table>
 
 </fieldset>
-                   
+     </form>                 
                     
 </div>
 </body>

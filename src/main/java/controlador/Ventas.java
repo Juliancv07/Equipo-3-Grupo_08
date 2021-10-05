@@ -11,6 +11,7 @@ import modelo.ClienteDAO;
 import modelo.ClienteDTO;
 import modelo.ProductoDAO;
 import modelo.ProductoDTO;
+import modelo.VentasDAO;
 
 
 
@@ -31,7 +32,7 @@ public class Ventas extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		ProductoDAO proDao= new ProductoDAO();
+		VentasDAO venDao= new VentasDAO();
 		ClienteDAO cliDao= new ClienteDAO();
 		
 		/*esto sobra porque ya esata el dela linea 51 en adelante*/
@@ -76,7 +77,7 @@ public class Ventas extends HttpServlet {
 			{
 				String codigo_producto, nombre_producto;
 				codigo_producto=request.getParameter("codigo_producto");
-				ProductoDTO pro=proDao.Buscar_Producto(codigo_producto);
+				ProductoDTO pro=venDao.Buscar_Producto(codigo_producto);
 					if(pro!=null)
 					{
 						codigo_producto=pro.getCodigo_producto();
