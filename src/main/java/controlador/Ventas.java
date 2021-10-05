@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.ClienteDAO;
+import modelo.ClienteDTO;
 import modelo.ProductoDAO;
 import modelo.ProductoDTO;
 
@@ -30,6 +32,7 @@ public class Ventas extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		ProductoDAO proDao= new ProductoDAO();
+		ClienteDAO cliDao= new ClienteDAO();
 		
 		/*esto sobra porque ya esata el dela linea 51 en adelante*/
 		
@@ -51,22 +54,25 @@ public class Ventas extends HttpServlet {
 			
 		//consultar o buscar
 		
-		if(request.getParameter("consultar")!=null) {
-			String nombre_producto, codigo_producto;//agregar precio del producto y el iva
-			codigo_producto=request.getParameter("codigo_producto");
-			
-			precio_venta=request.getParameter();//toca agregarlas en el DTO "parece"
-			valoriva=request.getParameter(valoriva);//toca agregarlas
-			
-			ProductoDTO pro=proDao.Buscar_Producto(codigo_producto);
-
-			if(pro!=null) {
-				codigo_producto=pro.getCodigo_producto();
-				nombre_producto=pro.getNombre_producto();
-				response.sendRedirect("DatosVen.jsp?codigo_producto="+codigo_producto+"&&nombre_producto="+nombre_producto);
-		}else {
-			response.sendRedirect("DatosVen.jsp?men=La Cedula no se EncuentraEl producto no se encontro");
-		}
+		if(request.getParameter("consultar")!=null)
+		{
+			String cedula_cliente, telefono_cliente, nombre_cliente, email_cliente, direccion_cliente;
+			cedula_cliente=request.getParameter("cedula_cliente");
+			ClienteDTO cli=cliDao.Buscar_Cedula(cedula_cliente);
+			if(cli!=null)
+			{
+				cedula_cliente=cli.getCedula_cliente();
+				telefono_cliente=cli.getTelefono_cliente();
+				nombre_cliente=cli.getNombre_cliente();
+				email_cliente=cli.getEmail_cliente();
+				direccion_cliente=cli.getDireccion_cliente();
+				response.sendRedirect("DatosVen.jsp?cedula_cliente="+cedula_cliente+"&&telefono_cliente="+telefono_cliente+"&&nombre_cliente="+nombre_cliente+"&&email_cliente="+email_cliente+
+						"&&direccion_cliente="+direccion_cliente);
+			}
+			else
+			{
+				response.sendRedirect("DatosVen.jsp?men=La Cedula no se Encuentra");
+			}
 	}
 		
 		

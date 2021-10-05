@@ -71,7 +71,7 @@
 		    	<form class="formulario" action="Usuario" method="post"> <!-- action donde se dirige lo que se solicita al Usuario.java -->
 			    	<tr>
 			    		<td><label for="Cedula">Cédula</label></td>
-			    		<td><input type="text" autofocus name="cedula_usuario" value ="<%=cedula%>"></td>	    		
+			    		<td><input type="text" autofocus name="cedulaprueba_usuario" value ="<%=cedula%>"></td>	    		
 			    		<td><label for="Usuario">Usuario</label></td>
 			        	<td><input type="text" name="usuario" value ="<%=Usuario%>"></td>    		
 			    	</tr>	    	

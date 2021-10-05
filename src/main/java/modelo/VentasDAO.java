@@ -9,12 +9,39 @@ import javax.swing.JOptionPane;
 
 import controlador.Conexion;
 
-public class VentasDAO {
+public class VentasDAO 
+{
 	
 	Conexion cnn=new Conexion();
 	Connection con=cnn.Conecta();
 	PreparedStatement ps=null;
 	ResultSet res=null;
+	
+	public ClienteDTO Buscar_Cedula(String cedula_cliente)
+	{
+			
+			ClienteDTO cli=null;
+			try 
+			{
+				String sql="select* from clientes where cedula_cliente=?"; //debe ir el nombre del campo de la BD
+				ps=con.prepareStatement(sql);
+				ps.setString(1, cedula_cliente);
+				res=ps.executeQuery();
+				while(res.next()) 
+				{
+					cli=new ClienteDTO(res.getString(1),res.getString(5),res.getString(4),res.getString(3),res.getString(2));
+					
+				}
+				
+			}
+			catch(SQLException ex)
+			{
+				JOptionPane.showMessageDialog(null,"Error al consultar Cedula del Cliente"+ ex);
+			}
+			return cli;
+		}
+	
+	
 	
 	public boolean Inserta_venta(VentasDTO v) {//v=venta
 		
