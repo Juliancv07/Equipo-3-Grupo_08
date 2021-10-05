@@ -35,24 +35,7 @@ public class Ventas extends HttpServlet {
 		VentasDAO venDao= new VentasDAO();
 		ClienteDAO cliDao= new ClienteDAO();
 		
-		/*esto sobra porque ya esata el dela linea 51 en adelante*/
 		
-		/*consulta el libro y trae los datos
-		if (request.getParameter("consultarProd")!=null) {
-			String codigo_producto=request.getParameter("producto");
-			//ProductoDAO proDao=new ProductoDAO(); //llamar el DAO del libro
-			ProductoDTO pro=proDao.Buscar_Producto(codigo_producto);
-			
-			if(pro!=null) {
-				String nombre_producto=pro.getNombre_producto();
-				codigo_producto=pro.getCodigo_producto();
-				response.sendRedirect("DatosVen.jsp?nombre_producto="+nombre_producto+"&&codigo_producto="+codigo_producto);
-			}else {
-				response.sendRedirect("DatosVen.jsp?men=El producto no se encontro");
-			}
-		}*/
-		
-			
 		//consultar o buscar cedula cliente
 		
 		if(request.getParameter("consultar")!=null)
@@ -75,14 +58,14 @@ public class Ventas extends HttpServlet {
 		//consultar producto
 			if(request.getParameter("consultar1")!=null)
 			{
-				String codigo_producto, nombre_producto;
-				codigo_producto=request.getParameter("codigo_producto");
-				ProductoDTO pro=venDao.Buscar_Producto(codigo_producto);
+				String codigo_producto1, nombre_producto1;
+				codigo_producto1=request.getParameter("codigo_producto1");
+				ProductoDTO pro=venDao.Buscar_Producto(codigo_producto1);
 					if(pro!=null)
 					{
-						codigo_producto=pro.getCodigo_producto();
-						nombre_producto=pro.getNombre_producto();
-						response.sendRedirect("DatosVen.jsp?codigo_producto="+codigo_producto+"&&nombre_producto="+nombre_producto);
+						codigo_producto1=pro.getCodigo_producto();
+						nombre_producto1=pro.getNombre_producto();
+						response.sendRedirect("DatosVen.jsp?codigo_producto1="+codigo_producto1+"&&nombre_producto1="+nombre_producto1);
 
 					}
 					else
@@ -90,6 +73,46 @@ public class Ventas extends HttpServlet {
 						response.sendRedirect("DatosVen.jsp?men=El producto no se Encuentra");
 					}
 			}
+			
+			//consultar 2
+			if(request.getParameter("consultar2")!=null)
+			{
+				String codigo_producto2, nombre_producto2;
+				codigo_producto2=request.getParameter("codigo_producto2");
+				ProductoDTO pro=venDao.Buscar_Producto(codigo_producto2);
+					if(pro!=null)
+					{
+						codigo_producto2=pro.getCodigo_producto();
+						nombre_producto2=pro.getNombre_producto();
+						response.sendRedirect("DatosVen.jsp?codigo_producto2="+codigo_producto2+"&&nombre_producto2="+nombre_producto2);
+
+					}
+					else
+					{
+						response.sendRedirect("DatosVen.jsp?men=El producto no se Encuentra");
+					}
+			}
+			
+			//consultar 3
+
+			if(request.getParameter("consultar3")!=null)
+			{
+				String codigo_producto3, nombre_producto3;
+				codigo_producto3=request.getParameter("codigo_producto3");
+				ProductoDTO pro=venDao.Buscar_Producto(codigo_producto3);
+					if(pro!=null)
+					{
+						codigo_producto3=pro.getCodigo_producto();
+						nombre_producto3=pro.getNombre_producto();
+						response.sendRedirect("DatosVen.jsp?codigo_producto3="+codigo_producto3+"&&nombre_producto3="+nombre_producto3);
+
+					}
+					else
+					{
+						response.sendRedirect("DatosVen.jsp?men=El producto no se Encuentra");
+					}
+			}
+			
 	}
 
 }

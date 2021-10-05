@@ -12,7 +12,11 @@
 <body>
 <div id="container">
 <!-- variables globales -->
-			<%!String cedula_cliente="", nombre_cliente="",	codigo_producto="", nombre_producto="";%>
+<%!String cedula_cliente="", nombre_cliente="",	codigo_producto1="", nombre_producto1="", codigo_producto2="", nombre_producto2="",
+codigo_producto3="", nombre_producto3="";%>
+
+<!-- %!int 	cantidad_producto1, cantidad_producto2, cantidad_producto3;%>-->
+
 		
 	<%
 	if(request.getParameter("cedula_cliente")!=null)
@@ -33,11 +37,11 @@
 	
 <!-- variables globales para buscar producto -->
 	<%
-	if(request.getParameter("codigo_producto")!=null)
+	if(request.getParameter("codigo_producto1")!=null)
 	{
 	
-		codigo_producto=request.getParameter("codigo_producto"); //los nombres debe ser como estan en Usuario.java response.sendRedirect
-		nombre_producto=request.getParameter("nombre_producto");
+		codigo_producto1=request.getParameter("codigo_producto1"); //los nombres debe ser como estan en Usuario.java response.sendRedirect
+		nombre_producto1=request.getParameter("nombre_producto1");
 
 	}
 	
@@ -45,9 +49,48 @@
 	{
 		String mensaje= request.getParameter("men");
 		out.print("<script type='text/javascript'>alert('"+mensaje+"');</script>");
-		codigo_producto=""; nombre_producto=""; 
+		codigo_producto1=""; nombre_producto1="";
 	} 
-	%>	
+
+	%>
+	
+	<!-- consulta prod 2 -->
+	<%
+	if(request.getParameter("codigo_producto2")!=null)
+	{
+	
+		codigo_producto2=request.getParameter("codigo_producto2"); //los nombres debe ser como estan en Usuario.java response.sendRedirect
+		nombre_producto2=request.getParameter("nombre_producto2");
+	
+	}
+	
+	if(request.getParameter("men")!=null)
+	{
+		String mensaje= request.getParameter("men");
+		out.print("<script type='text/javascript'>alert('"+mensaje+"');</script>");
+		codigo_producto2=""; nombre_producto2="";
+	} 
+
+	%>
+	
+	<!-- consulta prod 3 -->
+	<%
+	if(request.getParameter("codigo_producto3")!=null)
+	{
+	
+		codigo_producto3=request.getParameter("codigo_producto3"); //los nombres debe ser como estan en Usuario.java response.sendRedirect
+		nombre_producto3=request.getParameter("nombre_producto3");
+	}
+	
+	if(request.getParameter("men")!=null)
+	{
+		String mensaje= request.getParameter("men");
+		out.print("<script type='text/javascript'>alert('"+mensaje+"');</script>");
+		codigo_producto3=""; nombre_producto3="";
+	} 
+
+	%>
+		
 
 	<header class="principal">
         <div>
@@ -67,94 +110,85 @@
         </nav>
     </div>
 
-  	    <!-- formulario  Consultar cliente cedula-->
-				<form action="Ventas" method="post">
-				
-					<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;"><!-- estilo al borde y fondo del cuadro  -->
-						
-						<legend style="font-weight:bold; color:black;">Consultar Cédula</legend><!-- estilo para la letra  -->
-						<tr>	
-							<td><label for="cedula_cliente">Cédula</label></td>
-		    				<td><input type="text"  name="cedula_cliente" value ="<%=cedula_cliente%>"></td>	
-			    			<td><input type= "submit" name= "consultar" value="Consultar" id="boton"></td>
-		    				<td><input type="text"  name="nombre_cliente" value ="<%=nombre_cliente%>"></td>
-			    			<td><label>Consec: </label><input type="text" name="consec"></td>
-
-						</tr>
-					</fieldset>
-				
-
-				
-				
-<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;">  
-	<legend style="font-weight:bold; color:black;">Formulario Ventas</legend>
-        <table>
-
-                <thead>
-		                  	<tr>
-		                        <th>Cod.Producto</th>
-		                        <th></th>
-		                        <th>Nombre Producto</th>
-		                        <th>Cant.</th>
-		                        <th>Vlr. Total</th>
-		                    </tr>
-                	
-                	<tr>
+    <!-- formulario  Consultar cliente cedula-->
+	<form action="Ventas" method="post">
 	
-							<td><label for="codigo_producto"></label></td>
-		    				<td><input type="text"  name="codigo_producto" value ="<%=codigo_producto%>"></td>	
-			    			<td><input type= "submit" name= "consultar1" value="Consultar" id="boton"></td>
-			    			<td><input type="text"  name="nombre_producto" value ="<%=nombre_producto%>"></td>
-			    					    				
-					</tr>    
-          
-                  
-                </thead>
-                
-                <tbody>
-                    <tr><!-- se compara codigo de consultar de usuarios y se agregan la lineas que faltaban-->
-                        <td><input type="text" name="codigo_producto"></td>
-                        <td><input type="submit" name="Consultar2" value="Consultar" id="boton" ></td> <!-- cambiar el name consultar 1, 2, 3 -->
-                        <!-- traer el codigo de consultar de usuarios -->
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                   
-                    <tr>
-  						<td><input type="text" name="codigo_producto"></td>
-                        <td><input type="submit" name="Consultar3" value="Consultar" id="boton" ></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-						<td><input type="text" name="codigo_producto"></td>
-                        <td><input type="submit" name="Consultar4" value="Consultar" id="boton" ></td>
-                        <td><input type="text" value></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" rowspan="3"><input type="submit" name="Confirmar" value="Confirmar" id="boton"></td>
-                        <td>Total Venta</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Total IVA</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        
-                        <td>Total Con IVA</td>
-                        <td><input type="text"></td>
-                    </tr>
-                </tbody>
-            
-        </table>
+		<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;"><!-- estilo al borde y fondo del cuadro  -->
+			
+			<legend style="font-weight:bold; color:black;">Consultar Cédula</legend><!-- estilo para la letra  -->
+			<tr>	
+				<td><label for="cedula_cliente">Cédula</label></td>
+   				<td><input type="text"  name="cedula_cliente" value ="<%=cedula_cliente%>"></td>	
+    			<td><input type= "submit" name= "consultar" value="Consultar" id="boton"></td>
+   				<td><input type="text"  name="nombre_cliente" value ="<%=nombre_cliente%>"></td>
+    			<td><label>Consec: </label><input type="text" name="consec"></td>
 
-</fieldset>
+			</tr>
+		</fieldset>
+				
+		<fieldset style="border:0px groove #ccc; background-color: #FFFFFF80;">  
+			<legend style="font-weight:bold; color:black;">Formulario Ventas</legend>
+		        <table>
+		
+		                <thead>
+				                  	<tr>
+				                        <th>Cod.Producto</th>
+				                        <th></th>
+				                        <th>Nombre Producto</th>
+				                        <th>Cant.</th>
+				                        <th>Vlr. Total</th>
+				                    </tr>
+		                	
+		                	<tr>
+				    				<td><input type="text"  name="codigo_producto1" value ="<%=codigo_producto1%>"></td>	
+					    			<td><input type= "submit" name= "consultar1" value="Consultar" id="boton"></td>
+					    			<td><input type="text"  name="nombre_producto1" value ="<%=nombre_producto1%>"></td>
+					    			<td><input type="number" name= "cantidad1"></td>
+		                       		<td><input type="text"></td>
+							</tr>  
+							
+							
+							<tr>
+			                        <td><input type="text"  name="codigo_producto2" value ="<%=codigo_producto2%>"></td>	
+						    		<td><input type= "submit" name= "consultar2" value="Consultar" id="boton"></td>
+						    		<td><input type="text"  name="nombre_producto2" value ="<%=nombre_producto2%>"></td>
+			                        <td><input type="number" name= "cantidad2"></td>
+			                        <td><input type="text"></td>
+		                    </tr>  
+		                    
+		                    <tr>
+			                        <td><input type="text"  name="codigo_producto3" value ="<%=codigo_producto3%>"></td>	
+						    		<td><input type= "submit" name= "consultar3" value="Consultar" id="boton"></td>
+						    		<td><input type="text"  name="nombre_producto3" value ="<%=nombre_producto3%>"></td>
+			                        <td><input type="number" name= "cantidad3"></td>
+			                        <td><input type="text"></td>
+		                    </tr>
+		          
+		                  
+		                </thead>
+		                
+		                <tbody>
+		
+		                    <tr>
+		                        <td colspan="3" rowspan="3"><input type="submit" name="Confirmar" value="Confirmar" id="boton"></td>
+		                        <td>Total Venta</td>
+		                        <td><input type="text"></td>
+		                    </tr>
+		                    <tr>
+		                        
+		                        <td>Total IVA</td>
+		                        <td><input type="text"></td>
+		                    </tr>
+		                    <tr>
+		                        
+		                        <td>Total Con IVA</td>
+		                        <td><input type="text"></td>
+		                    </tr>
+		                </tbody>
+		            
+		        </table>
+		
+		</fieldset>
      </form>                 
                     
 </div>
