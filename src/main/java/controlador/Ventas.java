@@ -52,33 +52,43 @@ public class Ventas extends HttpServlet {
 		}*/
 		
 			
-		//consultar o buscar
+		//consultar o buscar cedula cliente
 		
 		if(request.getParameter("consultar")!=null)
 		{
-			String cedula_cliente, telefono_cliente, nombre_cliente, email_cliente, direccion_cliente;
+			String cedula_cliente, nombre_cliente;
 			cedula_cliente=request.getParameter("cedula_cliente");
 			ClienteDTO cli=cliDao.Buscar_Cedula(cedula_cliente);
-			if(cli!=null)
+				if(cli!=null)
+				{
+					cedula_cliente=cli.getCedula_cliente();
+					nombre_cliente=cli.getNombre_cliente();
+					response.sendRedirect("DatosVen.jsp?cedula_cliente="+cedula_cliente+"&&nombre_cliente="+nombre_cliente);
+				}
+				else
+				{
+					response.sendRedirect("DatosVen.jsp?men=La Cedula no se Encuentra");
+				}
+		}
+		
+		//consultar producto
+			if(request.getParameter("consultar1")!=null)
 			{
-				cedula_cliente=cli.getCedula_cliente();
-				telefono_cliente=cli.getTelefono_cliente();
-				nombre_cliente=cli.getNombre_cliente();
-				email_cliente=cli.getEmail_cliente();
-				direccion_cliente=cli.getDireccion_cliente();
-				response.sendRedirect("DatosVen.jsp?cedula_cliente="+cedula_cliente+"&&telefono_cliente="+telefono_cliente+"&&nombre_cliente="+nombre_cliente+"&&email_cliente="+email_cliente+
-						"&&direccion_cliente="+direccion_cliente);
+				String codigo_producto, nombre_producto;
+				codigo_producto=request.getParameter("codigo_producto");
+				ProductoDTO pro=proDao.Buscar_Producto(codigo_producto);
+					if(pro!=null)
+					{
+						codigo_producto=pro.getCodigo_producto();
+						nombre_producto=pro.getNombre_producto();
+						response.sendRedirect("DatosVen.jsp?codigo_producto="+codigo_producto+"&&nombre_producto="+nombre_producto);
+
+					}
+					else
+					{
+						response.sendRedirect("DatosVen.jsp?men=El producto no se Encuentra");
+					}
 			}
-			else
-			{
-				response.sendRedirect("DatosVen.jsp?men=La Cedula no se Encuentra");
-			}
-	}
-		
-		
-		
-		
-		
 	}
 
 }

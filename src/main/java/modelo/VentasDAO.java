@@ -41,6 +41,31 @@ public class VentasDAO
 			return cli;
 		}
 	
+/*buscar el producto*/
+	public ProductoDTO Buscar_Producto(String codigo_producto)
+	{
+			
+			ProductoDTO pro=null;
+			try 
+			{
+				String sql="select* from productos where codigo_producto=?"; //debe ir el nombre del campo de la BD
+				ps=con.prepareStatement(sql);
+				ps.setString(1, codigo_producto);
+				
+				res=ps.executeQuery();
+				while(res.next()) 
+				{
+					pro=new ProductoDTO(res.getString(1), res.getString(2), res.getString(3), res.getString(4), res.getString(5), res.getString(6));
+												
+				}
+				
+			}
+			catch(SQLException ex)
+			{
+				JOptionPane.showMessageDialog(null,"Error al consultar el codigo del producto"+ ex);
+			}
+			return pro;
+		}
 	
 	
 	public boolean Inserta_venta(VentasDTO v) {//v=venta
@@ -66,18 +91,7 @@ public class VentasDAO
 				while(res.next()) {
 					cod=res.getInt(1);
 				}
-				//esto sobra ya que se consulto el codigoa antes
 				
-				//traer el precio del producto con la sentencia sql
-	    		//sql="select precio_venta from productos where codigo_producto=?";
-	    		//ps=con.prepareStatement(sql);
-	    		//ps.setDouble(1, v.getValor_venta());
-	    		//res=ps.executeQuery();
-		    	//int precio=0;//guarda el precio
-			   // while(res.next()) {
-			   // 	precio=res.getInt(1);
-			   // }
-			    	
 			    //registrar detalle_venta con codigo_producto, 
 				//codigo_venta ya esta consultado, cantidad, se pude tomar el precio de producto y el iva
 		    	
